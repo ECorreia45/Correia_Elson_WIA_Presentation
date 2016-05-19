@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="description" content="Drop.js, DropJS presentation, demo and tutorial">
+	<title>Drop.JS | The fast and capable dropdown library</title>
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/dropJsStyle.css">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/drop-theme-arrows-bounce-dark.min.css">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+	<style>
+		.drop-popup{
+			background-color: #7F9F7F;
+			color: #fff;
+			padding: 10px;
+			border-radius: 10px;
+			}
+	</style>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1 style="margin: 0; font-size: 3em;">DROP.JS</h1>
+				<p style="margin: 0 0 20%; color: #FF8B00">The fast and capable dropdown library</p>
+				<a href="" style="font-size: .5em;">Watch The Youtube Presentation Video</a>
+				<p style="margin: 50px 0 0; font-size: .3em;">by: Elson Correia</p>
+			</section>
+			<section>
+				<h2 style="margin-bottom: 50px; color: #FF8B00;">what is drop.js?</h2>
+				<p style="font-size: .7em; padding: 0 20%;">
+					DropJs is a JavaScript and CSS library for creating dropdowns and other
+					popups attached to elements on the page. Drop uses Tether.js to
+					efficiently position its elements.
+				</p>
+				<p style="font-size: .7em; padding: 0 20%; margin-top: 50px;">
+					<a href="http://github.hubspot.com/tether/">Tether.js</a>
+					is a client-side library to make
+					absolutely
+					positioned elements attach to elements in
+					the page efficiently.</p>
+			</section>
+			<section>
+				<img src="mediaAndFiles/Picture1.png" alt="ie9+" width="100" style="margin: 0 auto; border: none;
+				background-color: transparent;">
+				<p style=" font-size: .5em; margin: 20px auto 0">Supported by IE9+ and all other browsers</p>
+				<p style="color: #ff8b00; margin-top: 50px;">DropJs is TetherJs dependent</p>
+				<img src="mediaAndFiles/Picture2.png" alt="ie9+" width="100" style="margin: 0 auto; border: none;
+				background-color: transparent;">
+			</section>
+			<section>
+				<h2 style="margin-bottom: 50px;">How To start</h2>
+				<p style="font-size: .7em; margin: 0; color: #ff8b00">Create a <span style="color: #fff;">Drop</span>
+				                                                      instance
+				                                                      :</p>
+				<img src="mediaAndFiles/Picture3.png" alt="drop instance" height="100" >
+				<p style="font-size: .7em; margin: 0; color: #ff8b00">OR, create <span style="color: #fff;">Drops</span>
+				                                                                                            from a custom ‘context’:</p>
+				<img src="mediaAndFiles/Picture4.png" alt="drop instance" height="140">
+			</section>
+			<section>
+				<img src="mediaAndFiles/Picture5.png" alt="file links" width="500">
+				<a href="http://github.hubspot.com/drop/docs/welcome/" style="width: 100%; display: block;
+				margin-bottom: 50px; font-size: .3em;">
+					DropJs on GitHub</a>
+				<div style="background-color: #eee; color: #333; padding: 20px; width: 250px; font-size: .4em;
+				text-align: left;">
+					<p style="margin: 0;">&#60;div class="drop-target"&#62;</p>
+					<p style="margin: 0; padding-left: 20px;">hover over me</p>
+					<p style="margin: 0;">&#60;div&#62;</p>
+				</div>
+				<p style="float: right; margin-top: -80px; color: #ff8b00;"> <<< Create your target element</p>
+				<div style="background-color: #eee; color: #333; padding: 20px; width: 450px; font-size: .4em;
+				text-align: left; margin-top: 30px;">
+					<p style="margin: 0;">var myDrop = new <span style="color: #880000">Drop</span>({</p>
+					<p style="margin: 0; padding-left: 20px;"><span style="color: #800">target</span>:
+							document.querySelector('.drop-target'),</p>
+					<p style="margin: 0; padding-left: 20px;"><span style="color: #800">content</span>: 'This is a
+					                                                                                  DropJs
+					                                                                                  Sample',</p>
+					<p style="margin: 0; padding-left: 20px;"><span style="color: #800">classes</span>: 'drop-popup',</p>
+					<p style="margin: 0; padding-left: 20px;"><span style="color: #800">position</span>: 'bottom
+					                                                                                   left',</p>
+					<p style="margin: 0; padding-left: 20px;"><span style="color: #800">openOn</span>: 'hover',</p>
+					<p style="margin: 0;">});</p>
+				</div>
+				<p style="float: right; margin-top: -80px; font-size: .8em; color: #ff8b00;"><<< Create your drop instance</p>
+				<div class="drop-target" style="width: 100px; height: 15px; background-color: #5E740B; margin-top:
+				20px; font-size: .3em;">hover over me</div>
+			</section>
+			<section>
+				<h2>Options</h2>
+				<p style="margin-bottom: 30px; text-align: left;">Default Options:</p>
+				<img src="mediaAndFiles/Picture6.png" alt="default options">
+				<ul style="font-size: .6em; float: right; color: #ff8b00;">
+					<li>target</li>
+					<li>content</li>
+					<li>position</li>
+					<li>openOn</li>
+					<li>constrainToWindow</li>
+					<li>constrainToScrollParent</li>
+					<li>classes</li>
+					<li>remove</li>
+					<li>beforeClose</li>
+					<li>hoverOpenDelay</li>
+					<li>hoverCloseDelay</li>
+					<li>focusDelay</li>
+					<li>blurDelay</li>
+					<li>openDelay</li>
+					<li>closeDelay</li>
+					<li>tetherOptions</li>
+				</ul>
+			</section>
+			<section>
+				<div style="background-color: #eee; color: #333; padding: 20px; width: 350px; font-size: .4em;
+				text-align: left;">
+					<p style="margin: 0;">&#60;div class="drop-target2"&#62;</p>
+					<p style="margin: 0; padding-left: 20px;">click me! I'll say Hello and turn Red</p>
+					<p style="margin: 0 0 0 20px;">&#60;div class="drop-content"&#62;</p>
+					<p style="margin: 0 0 0 40px; padding-left: 20px;">HELLO THERE!</p>
+					<p style="margin: 0 0 0 20px;">&#60;div&#62;</p>
+					<p style="margin: 0;">&#60;div&#62;</p>
+				</div>
+				<p style="float: right; margin-top: -80px; color: #ff8b00;"> <<< Create your target element</p>
+				<div style="background-color: #eee; color: #333; padding: 20px; width: 680px; font-size: .4em;
+				text-align: left; margin-top: 30px;">
+					<p style="margin: 0;">var myDrop2 = new <span style="color: #880000">Drop</span>({</p>
+					<p style="margin: 0; padding-left: 20px;"><span style="color: #800">target</span>:
+					                                                                                 document.querySelector('.drop-target2'),</p>
+					<p style="margin: 0; padding-left: 20px;"><span style="color: #800">content</span>: document.querySelector('.drop-content'),</p>
+					<p style="margin: 0; padding-left: 20px;"><span style="color: #800">classes</span>: 'drop-theme-arrows-bounce-dark',</p>
+					<p style="margin: 0; padding-left: 20px;"><span style="color: #800">position</span>: 'bottom
+					                                                                                   left',</p>
+					<p style="margin: 0; padding-left: 20px;"><span style="color: #800">openOn</span>: 'click',</p>
+					<p style="margin: 0; padding-left: 20px;"><span style="color: #800">beforeClose:</span> function(){</p>
+					<p
+							style="margin: 0; padding-left: 40px;">document.querySelector('.drop-target2').style.backgroundColor = "#800";}</p>
+					<p style="margin: 0;">});</p>
+				</div>
+				<p style="float: right; margin-top: -80px; color: #ff8b00; font-size: .5em"> < Create Drop
+				                                                                             Instance</p>
+				<div class="drop-target2 " style="background-color: #8DCFFC; margin-top: 20px;
+				height: 30px; width: 400px; font-size: .5em; overflow: auto; padding-top: 5px;">
+					click me! I'll say Hello and turn Red
+					<div class="drop-content">
+						HELLO THERE!
+					</div>
+				</div>
+			</section>
+			<section>
+				<h2>Events & Methods</h2>
+				<ul style="font-size: .6em; float: left; color: #ff8b00;">
+					<li>on(eventName, handler, [ctx])</li>
+					<li>off(eventName, handler)</li>
+					<li>ounce(eventName, handler, [ctx])</li>
+				</ul>
+				<ul style="font-size: .6em; float: right; color: #ff8b00;">
+					<li>open()</li>
+					<li>close()</li>
+					<li>remove()</li>
+					<li>toggle()</li>
+					<li>isOpened()</li>
+					<li>position()</li>
+					<li>destroy()</li>
+				</ul>
+				<div style="background-color: #eee; color: #333; padding: 20px; width: 450px; font-size: .4em;
+				text-align: left; margin-top: 30px; float: left;">
+					<p style="margin: 0;">var myDrop = new <span style="color: #880000">Drop</span>({</p>
+					<p style="margin: 0; padding-left: 20px;"><span style="color: #800">target</span>:
+					                                                                                 document.querySelector('.drop-target'),</p>
+					<p style="margin: 0; padding-left: 20px;"><span style="color: #800">content</span>: 'This is a
+					                                                                                  DropJs
+					                                                                                  Sample',</p>
+					<p style="margin: 0; padding-left: 20px;"><span style="color: #800">classes</span>: 'drop-popup',</p>
+					<p style="margin: 0; padding-left: 20px;"><span style="color: #800">position</span>: 'bottom
+					                                                                                   left',</p>
+					<p style="margin: 0; padding-left: 20px;"><span style="color: #800">openOn</span>: 'hover',</p>
+					<p style="margin: 0;">});</p>
+				</div>
+				<div style="background-color: #eee; color: #333; padding: 20px; width: 450px; font-size: .4em;
+				text-align: left; margin-top: 30px; float: left;">
+					<p>myDrop.open();</p>
+					<p>myDrop.off('click', function(){ '//Do Something} );</p>
+				</div>
+			</section>
+			<section>
+				<a href="mediaAndFiles/DROPJS.docx" download=""
+				   style="display: block; margin-bottom: 20px;">Download
+				                                                                                           DropJS
+				                                                                           CheatSheet</a>
+				<a href="http://github.hubspot.com/drop/docs/welcome/"
+				   style="display: block; margin-bottom: 20px; ">Visit DropJS Page</a>
+				<a href="http://github.hubspot.com/tether/docs/welcome/"
+				   style="display: block; margin-bottom: 60px;">Visit TetherJS
+				                                                                                  Page</a>
+				<p>by: Elson Correia 2016</p>
+			</section>
+		</div>
+	</div>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/tether.min.js"></script>
+	<script src="js/drop.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
